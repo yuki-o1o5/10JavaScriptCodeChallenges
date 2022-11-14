@@ -81,7 +81,7 @@
 
 // =========================================================================
 
-// 5. Create a function that reverses an array
+// 5. Create a function that reverses an array @
 // This challenge is particularly helpful if you're planning to become a Data Scientist.
 // Manipulating data is a significant part of the role, and building the foundations now will help you
 // later down the road when you're working with large databases.
@@ -100,11 +100,11 @@
 
 // =========================================================================
 
-// 6. Sort an array from lowest to highest
+// 6. Sort an array from lowest to highest @
 // You could create a function for this solution as well, but be sure to try your program with varying lengths and types of arrays.
 // Try one with all integers, another with negative numbers, and another with decimals.
 
-let numbers = [3, -2, 5, 4, 10, 6, 3, 1];
+// let numbers = [3, -2, 5, 4, 10, 6, 3, 1];
 // const sortArray = (array) => {
 //   for (let i = 0; i < array.length; i++) {
 //     for (let j = 0; j < array.length; j++) {
@@ -127,6 +127,32 @@ let numbers = [3, -2, 5, 4, 10, 6, 3, 1];
 // But if all goes according to plan, it'll remove the negative numbers.
 // This is another example of a task that'll be useful when combing through data and looking for clever ways to eliminate "bad data."
 
+// Pattern1
+// let numbers = [3, -2, 5, 4, 10, 6, 3, 1];
+// const filterNegativeNumbers1 = (array) => {
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] < 0) {
+//       array.splice(i, 1);
+//     }
+//   }
+//   console.log(array);
+// };
+
+// filterNegativeNumbers1(numbers);
+
+// Pattern2 ???
+// let numbers = [3, -2, 5, 4, 10, -6, 3, 1];
+// const filterNegativeNumbers2 = (array) => {
+//   array.filter((element)=>{
+//     if(element<0){
+//       array.splice(element,1);
+//     }
+//   })
+//   console.log(array);
+// };
+
+// filterNegativeNumbers2(numbers);
+
 // =========================================================================
 
 // 8. Remove the spaces found in a string
@@ -135,11 +161,43 @@ let numbers = [3, -2, 5, 4, 10, 6, 3, 1];
 // Think about if you were tasked with cleaning up customer data at your job.
 // You could scale this function to clean up specific fields of data, such as zip codes.
 
+// Pattern1 ???
+// let myName = "Yuki K asugai";
+// const removeSpace1 = (str) => {
+//   for(let i = 0; i < str.length; i++ ){
+//     if(str[i]==" "){
+//       var noSpace = str.replace(" ","")
+//     }
+
+//   }
+//   console.log(noSpace);
+// }
+
+// removeSpace1(myName);
+
+// Pattern2
+// let myName = "Yuki K asugai";
+// const removeSpace2 = (str) => {
+//   console.log(str.replace(/\s/g, ""));
+// };
+
+// removeSpace2(myName);
+
 // =========================================================================
 
 // 9. Return a Boolean if a number is divisible by 10
 // Here, you'll create a function that'll give you a "true" or "false" Boolean as its output.
 // The inputted number should only return a "true" if it's divisible by 10. Otherwise, your program should return a "false" answer.
+
+// const returnBoolean = (num) => {
+//   if (num % 10 === 0) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
+
+// returnBoolean(100);
 
 // =========================================================================
 
@@ -148,5 +206,24 @@ let numbers = [3, -2, 5, 4, 10, 6, 3, 1];
 // This is a great way to practice determining the features of a dataset.
 // If you use JavaScript later in your career, you'll be well-prepared to determine what datasets (or just strings) consist of.
 // If you feel like an extra challenge, consider returning the number of characters.
+
+// ???
+// let word = "Good morning everyone!";
+// const numberOfVowels = (str) => {
+//   str.split("");
+// }
+
+// let word = "Good morning everyone!";
+// const numberOfVowels = (str) => {
+//   let eachWord = str.split("");
+//   var count = 0;
+//   for(let i = 0; i<eachWord.length; i++){
+//     if(eachWord[i] === "a" | "i" | "u" | "e" | "o"){
+//       count =+ 1;
+//     }
+//   }
+//   console.log(count);
+// }
+// numberOfVowels(word);
 
 // =========================================================================
