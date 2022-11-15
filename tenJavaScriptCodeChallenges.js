@@ -208,22 +208,18 @@
 // If you feel like an extra challenge, consider returning the number of characters.
 
 // ???
-// let word = "Good morning everyone!";
-// const numberOfVowels = (str) => {
-//   str.split("");
-// }
+let word = "Good morning everyone!";
+const numberOfVowels = (str) => {
+  let count = 0;
+  const vowels = ["a", "e", "i", "o", "u"];
+  for (const element of word.toLowerCase()) {
+    if (vowels.includes(element)) {
+      count++;
+    }
+  }
+  console.log(count);
+};
 
-// let word = "Good morning everyone!";
-// const numberOfVowels = (str) => {
-//   let eachWord = str.split("");
-//   var count = 0;
-//   for(let i = 0; i<eachWord.length; i++){
-//     if(eachWord[i] === "a" | "i" | "u" | "e" | "o"){
-//       count =+ 1;
-//     }
-//   }
-//   console.log(count);
-// }
-// numberOfVowels(word);
+numberOfVowels(word);
 
 // =========================================================================
