@@ -187,7 +187,7 @@ filterNegativeNumbers2(numbers);
 // Think about if you were tasked with cleaning up customer data at your job.
 // You could scale this function to clean up specific fields of data, such as zip codes.
 
-// Pattern1
+// Pattern1???
 let myName = "Yuki K asugai";
 const removeSpace1 = (str) => {
   for (let i = 0; i < str.length; i++) {
