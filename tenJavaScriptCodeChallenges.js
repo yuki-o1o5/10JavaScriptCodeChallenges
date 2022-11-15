@@ -5,25 +5,25 @@
 // could output them in a way that would work up to 10 or even up to 10,000 with little extra effort.
 
 // Pattern 1
-// let number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-// const printAllEvenNumbers1 = () => {
-//   for (let i = 1; i < number.length; i++) {
-//     if (number[i] % 2 === 0) {
-//       console.log(number[i]);
-//     }
-//   }
-// };
-// printAllEvenNumbers1();
+let number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const printAllEvenNumbers1 = () => {
+  for (let i = 1; i < number.length; i++) {
+    if (number[i] % 2 === 0) {
+      console.log(number[i]);
+    }
+  }
+};
+printAllEvenNumbers1();
 
 // Pattern 2
-// const printAllEvenNumbers2 = (number) => {
-//   for (let i = 1; i <= number; i++) {
-//     if (i % 2 == 0) {
-//       console.log(i);
-//     }
-//   }
-// };
-// printAllEvenNumbers2(10000);
+const printAllEvenNumbers2 = (number) => {
+  for (let i = 1; i <= number; i++) {
+    if (i % 2 == 0) {
+      console.log(i);
+    }
+  }
+};
+printAllEvenNumbers2(10000);
 
 // =========================================================================
 
@@ -32,15 +32,15 @@
 // Can you print a table that contains all the answers to the multiplication tables from 1 through 10?
 // Like Challenge #1, can you create an efficient solution that you could easily expand should you need the 12 times table?
 
-// const printMultiplicationTable = (number) => {
-//   for (let i = 1; i <= number; i++) {
-//     for (let j = 1; j <= number; j++) {
-//       console.log(i + "×" + j + "=" + i * j);
-//     }
-//   }
-// };
+const printMultiplicationTable = (number) => {
+  for (let i = 1; i <= number; i++) {
+    for (let j = 1; j <= number; j++) {
+      console.log(i + "×" + j + "=" + i * j);
+    }
+  }
+};
 
-// printMultiplicationTable(12);
+printMultiplicationTable(12);
 
 // =========================================================================
 
@@ -51,12 +51,12 @@
 // Let's start with a conversion from kilometers to miles. The function should include the input in kilometers and
 // return the answer in miles.
 
-// const createLengthConverter = (kilometers) => {
-//   let result = kilometers / 1.609344;
-//   return kilometers + "km = " + result.toFixed(6) + " mile";
-// };
+const createLengthConverter = (kilometers) => {
+  let result = kilometers / 1.609344;
+  return kilometers + "km = " + result.toFixed(6) + " mile";
+};
 
-// createLengthConverter(1);
+createLengthConverter(1);
 
 // =========================================================================
 
@@ -67,58 +67,82 @@
 // try the slightly more challenging bonus challenge below.
 // Bonus intermediate challenge: Create a function that can return the sum of a particular column or row number in a table.
 
-// let numbers = [-3, -2, -1, 1, 2, 3, 4, 5, 1.2];
+let numbers = [-3, -2, -1, 1, 2, 3, 4, 5, 1.2];
 
-// const calculateSumOfNumbers = (array) => {
-//   let sum = 0;
-//   for (let i = 0; i < array.length; i++) {
-//     sum = array[i] + sum;
-//   }
-//   console.log(sum);
-// };
+const calculateSumOfNumbers = (array) => {
+  let sum = 0;
+  for (let i = 0; i < array.length; i++) {
+    sum = array[i] + sum;
+  }
+  return sum;
+};
 
-// calculateSumOfNumbers(numbers);
+calculateSumOfNumbers(numbers);
 
 // =========================================================================
 
-// 5. Create a function that reverses an array @
+// 5. Create a function that reverses an array
 // This challenge is particularly helpful if you're planning to become a Data Scientist.
 // Manipulating data is a significant part of the role, and building the foundations now will help you
 // later down the road when you're working with large databases.
 // Start small here and work your way up. Begin with an array of 5 numbers, and then try your program with a larger array to verify its success.
 
-// let numbers = [1, 2, 3, 4, 5];
-// const reverseArray = (array) => {
-//   let newNumbers = [];
-//   for (let i = array.length - 1; i >= 0; i--) {
-//     newNumbers.push(numbers[i]);
-//   }
-//   console.log(newNumbers);
-// };
+// Pattern1
+let numbers = [1, 2, 3, 4, 5];
+const reverseArray1 = (array) => {
+  let newNumbers = [];
+  for (let i = array.length - 1; i >= 0; i--) {
+    newNumbers.push(numbers[i]);
+  }
+  return newNumbers;
+};
 
-// reverseArray(numbers);
+reverseArray1(numbers);
+
+// Pattern2
+let numbers = [1, 2, 3, 4, 5];
+
+const reverseArray2 = (array) => {
+  return array.reverse();
+};
+
+reverseArray2(numbers);
 
 // =========================================================================
 
-// 6. Sort an array from lowest to highest @
+// 6. Sort an array from lowest to highest
 // You could create a function for this solution as well, but be sure to try your program with varying lengths and types of arrays.
 // Try one with all integers, another with negative numbers, and another with decimals.
 
-// let numbers = [3, -2, 5, 4, 10, 6, 3, 1];
-// const sortArray = (array) => {
-//   for (let i = 0; i < array.length; i++) {
-//     for (let j = 0; j < array.length; j++) {
-//       if (array[j] > array[j + 1]) {
-//         let current = array[j];
-//         array[j] = array[j + 1];
-//         array[j + 1] = current;
-//       }
-//     }
-//   }
-//   console.log(numbers);
-// };
+// Pattern1
+let numbers = [3, -2, 5, 4, 10, 6, 3, 1];
+const sortArray1 = (array) => {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array.length; j++) {
+      if (array[j] > array[j + 1]) {
+        let current = array[j];
+        array[j] = array[j + 1];
+        array[j + 1] = current;
+      }
+    }
+  }
+  return numbers;
+};
 
-// sortArray(numbers);
+sortArray1(numbers);
+
+// Pattern2
+let numbers = [3, -2, 5, 4, 10, 6, 3, 1];
+
+const sortArray2 = (array) => {
+  return array.sort(compareNumbers);
+};
+
+const compareNumbers = (a, b) => {
+  return a - b;
+};
+
+sortArray2(numbers);
 
 // =========================================================================
 
@@ -128,30 +152,32 @@
 // This is another example of a task that'll be useful when combing through data and looking for clever ways to eliminate "bad data."
 
 // Pattern1
-// let numbers = [3, -2, 5, 4, 10, 6, 3, 1];
-// const filterNegativeNumbers1 = (array) => {
-//   for (let i = 0; i < array.length; i++) {
-//     if (array[i] < 0) {
-//       array.splice(i, 1);
-//     }
-//   }
-//   console.log(array);
-// };
+let numbers = [3, -2, 5, 4, 10, 6, 3, 1];
+const filterNegativeNumbers1 = (array) => {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] < 0) {
+      array.splice(i, 1);
+    }
+  }
+  return array;
+};
 
-// filterNegativeNumbers1(numbers);
+filterNegativeNumbers1(numbers);
 
-// Pattern2 ???
-// let numbers = [3, -2, 5, 4, 10, -6, 3, 1];
-// const filterNegativeNumbers2 = (array) => {
-//   array.filter((element)=>{
-//     if(element<0){
-//       array.splice(element,1);
-//     }
-//   })
-//   console.log(array);
-// };
+// Pattern2
 
-// filterNegativeNumbers2(numbers);
+let numbers = [3, -2, 5, 4, 10, -6, 3, 1];
+
+const filterNegativeNumbers2 = (array) => {
+  let result = array.filter(checkNegativeNumber);
+  return result;
+};
+
+const checkNegativeNumber = (num) => {
+  return num > 0;
+};
+
+filterNegativeNumbers2(numbers);
 
 // =========================================================================
 
@@ -161,27 +187,26 @@
 // Think about if you were tasked with cleaning up customer data at your job.
 // You could scale this function to clean up specific fields of data, such as zip codes.
 
-// Pattern1 ???
-// let myName = "Yuki K asugai";
-// const removeSpace1 = (str) => {
-//   for(let i = 0; i < str.length; i++ ){
-//     if(str[i]==" "){
-//       var noSpace = str.replace(" ","")
-//     }
+// Pattern1
+let myName = "Yuki K asugai";
+const removeSpace1 = (str) => {
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] == " ") {
+      var noSpace = str.replace(" ", "");
+    }
+  }
+  console.log(noSpace);
+};
 
-//   }
-//   console.log(noSpace);
-// }
-
-// removeSpace1(myName);
+removeSpace1(myName);
 
 // Pattern2
-// let myName = "Yuki K asugai";
-// const removeSpace2 = (str) => {
-//   console.log(str.replace(/\s/g, ""));
-// };
+let myName = "Yuki K asugai";
+const removeSpace2 = (str) => {
+  return str.replace(/\s/g, "");
+};
 
-// removeSpace2(myName);
+removeSpace2(myName);
 
 // =========================================================================
 
@@ -189,15 +214,15 @@
 // Here, you'll create a function that'll give you a "true" or "false" Boolean as its output.
 // The inputted number should only return a "true" if it's divisible by 10. Otherwise, your program should return a "false" answer.
 
-// const returnBoolean = (num) => {
-//   if (num % 10 === 0) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// };
+const returnBoolean = (num) => {
+  if (num % 10 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+};
 
-// returnBoolean(100);
+returnBoolean(100);
 
 // =========================================================================
 
@@ -207,7 +232,6 @@
 // If you use JavaScript later in your career, you'll be well-prepared to determine what datasets (or just strings) consist of.
 // If you feel like an extra challenge, consider returning the number of characters.
 
-// ???
 let word = "Good morning everyone!";
 const numberOfVowels = (str) => {
   let count = 0;
@@ -217,7 +241,7 @@ const numberOfVowels = (str) => {
       count++;
     }
   }
-  console.log(count);
+  return count;
 };
 
 numberOfVowels(word);
