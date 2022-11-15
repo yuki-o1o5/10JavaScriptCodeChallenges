@@ -212,7 +212,7 @@ let word = "Good morning everyone!";
 const numberOfVowels = (str) => {
   let count = 0;
   const vowels = ["a", "e", "i", "o", "u"];
-  for (const element of word.toLowerCase()) {
+  for (const element of str.toLowerCase()) {
     if (vowels.includes(element)) {
       count++;
     }
